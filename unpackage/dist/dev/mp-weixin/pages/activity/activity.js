@@ -176,12 +176,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
     return {
       active: 1,
-      activityList: [] };
+      activityList: [],
+      modeList: [
+      {
+        label: '线下活动',
+        value: 1 },
+
+      {
+        label: '线上直播',
+        value: 2 }] };
+
+
 
   },
   onLoad: function onLoad() {
@@ -223,11 +235,11 @@ var _default =
             id: res[i].objectId,
             src: res[i].imgSrc,
             title: res[i].title,
-            desc: res[i].desc,
+            // desc: res[i].desc,
             // startTime: that.$moment(res[i].startTime).format('YYYY-MM-DD HH:mm'),
             // endTime: that.$moment(res[i].endTime).format('YYYY-MM-DD HH:mm'),
             number: res[i].number,
-            // mode: that.modeList[res[i].mode - 1].label,
+            mode: that.modeList[res[i].mode - 1].label,
             fee: res[i].fee });
 
         }

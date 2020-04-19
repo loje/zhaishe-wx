@@ -13,19 +13,21 @@
 			<template v-for="(item, $index) in activityList">
 				<view class="the-activity" :key="$index">
 					<view class="activity-left">
-						<view class="img" :style="{backgroundImage: `url(${item.src})`}"></view>
+						<!-- <view class="img" :style="{backgroundImage: `url(${item.src})`}"></view> -->
+						<image class="img" :src="item.src" lazy-load mode="aspectFill"></image>
 					</view>
 					<view class="activity-right">
 						<view class="activity-title">{{item.title}}</view>
-						<view class="activity-desc">{{item.desc}}</view>
+						<!-- <view class="activity-desc">{{item.desc}}</view> -->
 
 						<view class="activity-info">
+							{{item.mode}} / {{item.number}}人
 							<!-- <view class="info">活动时间：{{item.startTime}} ~ {{item.endTime}}</view> -->
 							<!-- <view class="info">活动人数：{{item.number}}</view> -->
 							<!-- <view class="info">活动方式：{{item.mode}}</view> -->
-							<view class="info">活动费用：{{item.fee || '免费'}}</view>
+							<!-- <view class="info">活动费用：{{item.fee || '免费'}}</view> -->
 						</view>
-						<view class="activity-link">查看</view>          
+						<!-- <view class="activity-link">查看</view>          -->
 					</view>
 				</view>
 			</template>
@@ -39,6 +41,16 @@
 			return {
 				active: 1,
 				activityList: [],
+				modeList: [
+					{
+						label: '线下活动',
+						value: 1,
+					},
+					{
+						label: '线上直播',
+						value: 2,
+					},
+				],
 			}
 		},
 		onLoad() {
@@ -80,11 +92,11 @@
 							id: res[i].objectId,
 							src: res[i].imgSrc,
 							title: res[i].title,
-							desc: res[i].desc,
+							// desc: res[i].desc,
 							// startTime: that.$moment(res[i].startTime).format('YYYY-MM-DD HH:mm'),
 							// endTime: that.$moment(res[i].endTime).format('YYYY-MM-DD HH:mm'),
 							number: res[i].number,
-							// mode: that.modeList[res[i].mode - 1].label,
+							mode: that.modeList[res[i].mode - 1].label,
 							fee: res[i].fee,
 						});
 					}
@@ -132,6 +144,37 @@
 		.list-view {
 			height: calc(100vh - 82rpx);
 			box-sizing: border-box;
+			.the-activity {
+				display: flex;
+				padding: 30rpx;
+				box-sizing: border-box;
+				border-bottom: 2rpx solid #eee;
+				.activity-left {
+					width: 280rpx;
+					.img {
+						width: 280rpx;
+						height: 160rpx;
+					}
+				}
+				.activity-right {
+					position: relative;
+					flex: 1;
+					padding-left: 30rpx;
+					.activity-title {
+						font-size: 30rpx;
+						color: #333;
+					}
+					.activity-info {
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						padding: 0 30rpx;
+						font-size: 24rpx;
+						color: #999;
+						box-sizing: border-box;
+					}
+				}
+			}
 		}
 	}
 

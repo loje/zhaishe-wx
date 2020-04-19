@@ -58,4 +58,39 @@
     height: calc(100vh - 82rpx);
     box-sizing: border-box;
 }
+.page-view .list-view .the-activity {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      padding: 30rpx;
+      box-sizing: border-box;
+      border-bottom: 2rpx solid #eee;
+}
+.page-view .list-view .the-activity .activity-left {
+        width: 280rpx;
+}
+.page-view .list-view .the-activity .activity-left .img {
+          width: 280rpx;
+          height: 160rpx;
+}
+.page-view .list-view .the-activity .activity-right {
+        position: relative;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+                flex: 1;
+        padding-left: 30rpx;
+}
+.page-view .list-view .the-activity .activity-right .activity-title {
+          font-size: 30rpx;
+          color: #333;
+}
+.page-view .list-view .the-activity .activity-right .activity-info {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          padding: 0 30rpx;
+          font-size: 24rpx;
+          color: #999;
+          box-sizing: border-box;
+}
 
