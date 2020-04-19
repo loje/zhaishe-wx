@@ -95,7 +95,11 @@
     "h5" : {
         "uniStatistics" : {
             "enable" : false
-        }
+        },
+        "router" : {
+            "mode" : "history"
+        },
+        "domain" : "http://zdesigner.cn/wx"
     },
     "mp-qq" : {
         "uniStatistics" : {
