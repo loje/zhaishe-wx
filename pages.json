@@ -10,7 +10,8 @@
 		{
 			"path": "pages/desinger/desinger",
 			"style": {
-				"navigationBarTitleText": "设计师工具"
+				"navigationBarTitleText": "设计师工具",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
