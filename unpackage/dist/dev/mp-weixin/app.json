@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/activity/activity",
-    "pages/desinger/desinger",
+    "pages/tool/tool",
+    "pages/toolItem/toolItem",
     "pages/user/user",
     "pages/index/index"
   ],
@@ -18,7 +19,7 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/desinger/desinger",
+        "pagePath": "pages/tool/tool",
         "iconPath": "./static/btm/3.png",
         "text": "设计师工具",
         "selectedIconPath": "./static/btm/3-1.png"

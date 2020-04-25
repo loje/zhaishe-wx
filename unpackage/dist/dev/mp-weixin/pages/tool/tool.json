@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "设计师工具",
+  "enablePullDownRefresh": true,
   "usingComponents": {}
 }

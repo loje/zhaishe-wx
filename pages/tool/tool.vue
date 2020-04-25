@@ -3,14 +3,14 @@
 		<template v-for="(item, $index) in toolList">
 			<view class="the-tool" :key="$index">
 				<view class="tool-left">
-					<image class="img" :src="item.imgSrc" lazy-load mode="widthFix"></image>
+					<image class="img" :src="item.imgSrc" lazy-load mode="widthFix" @click="goBuy(item.id)"></image>
 				</view>
 				<view class="tool-right">
 					<view class="tool-title">{{item.title}}</view>
 					<view class="tool-desc">{{item.desc}}</view>
 					<view class="tool-btm">
 						<text class="sell">已售0</text>
-						<text class="buy">去购买</text>
+						<text class="buy" @click="goBuy(item.id)">去购买</text>
 					</view>
 				</view>
 			</view>
@@ -37,6 +37,7 @@
 				
 				query.order('-endTime');
 				query.equalTo('notDelete', '==', true);
+				query.equalTo('status', '==', 0);
 				query.find().then((res) => {
 					uni.stopPullDownRefresh();
 					// that.loading = false;
@@ -57,6 +58,11 @@
 					// 		uni.stopPullDownRefresh();
 					// }, 1000);
 					this.getToolList();
+			},
+			goBuy(id) {
+				uni.navigateTo({
+				  url: `../toolItem/toolItem?id=${id}`
+				});
 			}
 		}
 	}
@@ -69,6 +75,7 @@
 			display: flex;
 			padding: 30rpx;
 			height: 220rpx;
+			background-color: #fff;
 			box-sizing: border-box;
 			border-bottom: 2rpx solid #eee;
 			.tool-left {

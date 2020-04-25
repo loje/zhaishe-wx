@@ -24,77 +24,66 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.page-view {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+page {
+  background-color: #f6f6f6;
 }
-.page-view .tabs {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  width: 100%;
-  height: 80rpx;
-  line-height: 80rpx;
-  border-bottom: 2rpx solid #eee;
-}
-.page-view .tabs .tab {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  color: #999;
-  text-align: center;
-  font-size: 30rpx;
-}
-.page-view .tabs .tab .tab-text {
-  display: inline-block;
-  line-height: 78rpx;
-}
-.page-view .tabs .tab.active {
-  color: #333333;
-}
-.page-view .tabs .tab.active .tab-text {
-  border-bottom: 4rpx solid #333;
-}
-.page-view .list-view {
-  height: calc(100vh - 82rpx);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.page-view .list-view .the-activity {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
+.tool-page .tool-info {
   padding: 30rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-bottom: 2rpx solid #eee;
+  background-color: #fff;
 }
-.page-view .list-view .the-activity .activity-left {
-  width: 280rpx;
+.tool-page .tool-info .the-tool {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
 }
-.page-view .list-view .the-activity .activity-left .img {
-  width: 280rpx;
+.tool-page .tool-info .the-tool .tool-left {
+  width: 160rpx;
   height: 160rpx;
 }
-.page-view .list-view .the-activity .activity-right {
-  position: relative;
+.tool-page .tool-info .the-tool .tool-left image {
+  width: 100%;
+  height: 100%;
+}
+.tool-page .tool-info .the-tool .tool-right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
   padding-left: 30rpx;
-}
-.page-view .list-view .the-activity .activity-right .activity-title {
-  font-size: 30rpx;
-  color: #333;
-}
-.page-view .list-view .the-activity .activity-right .activity-info {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 0 30rpx;
-  font-size: 24rpx;
-  color: #999;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.tool-page .tool-info .the-tool .tool-right .tool-title {
+  margin-bottom: 20rpx;
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+.tool-page .tool-info .the-tool .tool-right .tool-desc {
+  font-size: 20rpx;
+  color: #666;
+}
+.tool-page .tool-info .tool-data {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20rpx 0;
+  font-size: 20rpx;
+  color: #999;
+}
+.tool-page .tool-info .tool-data .tool-sell {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: right;
+}
+.tool-page .tool-btm {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
 }
 

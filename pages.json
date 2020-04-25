@@ -8,10 +8,18 @@
 			}
 		},
 		{
-			"path": "pages/desinger/desinger",
+			"path": "pages/tool/tool",
 			"style": {
 				"navigationBarTitleText": "设计师工具",
 				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/toolItem/toolItem",
+			"style": {
+				"navigationBarTitleText": "产品详情",
+				"enablePullDownRefresh": true
+				// "backgroundColor":"#F6F6F6"
 			}
 		},
 		{
@@ -39,7 +47,7 @@
 		"backgroundColor":"#fff",
 		"list": [
 			{
-				"pagePath":"pages/desinger/desinger",
+				"pagePath":"pages/tool/tool",
 				"iconPath":"./static/btm/3.png",
 				"text":"设计师工具",
 				"selectedIconPath":"./static/btm/3-1.png"
